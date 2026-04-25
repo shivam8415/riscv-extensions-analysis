@@ -4,23 +4,25 @@
 
 ---
 
-## Project structure
+project-root/
+│
 ├── Task-1/
-│ ├── task1.py              # Parses JSON, groups instructions by extension
-│ └── Task-1.md             # Report (counts, observations)
+│   ├── task1.py
+│   └── Task-1.md
+│
 ├── Task-2/
-│ ├── task2.py              # Extracts extensions from ISA manual (AsciiDoc)
-│ ├── riscv-isa-manual/     # Official spec (submodule or local copy)
-│ └── Task-2.md             # Comparison: JSON vs manual
+│   ├── task2.py
+│   ├── riscv-isa-manual/
+│   └── Task-2.md
+│
 ├── Task-3/
-│ ├── graph.py              # Builds graph from shared instructions
-│ ├── visual_graph.py       # Renders graph.png (main visual)
-│ ├── graph.png             # Final output image
-│ ├── test/
-│ │ └── test_task.py        # Unit tests for graph logic
-├── PROPOSAL.md             # Initial project proposal
-└── README.md               # You are here
-
+│   ├── graph.py              # CORE LOGIC (build graph)
+│   ├── visual_graph.py       # ONLY visualization (creates PNG)
+│   ├── graph.png             # OUTPUT IMAGE
+│   ├── test/
+│   │   └── test_task.py      # UNIT TESTS
+│
+└── README.md
 
 **Note:** `package.json`, `webpack.config.js`, `tailwind.config.js` are from another experiment – ignore them.
 
@@ -83,7 +85,7 @@ Task 3
 bash
 cd ../Task-3
 python visual_graph.py   # or graph.py
-
+```
 Author
 Shivam Yadav
 Mumbai, India

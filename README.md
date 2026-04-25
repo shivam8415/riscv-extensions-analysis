@@ -5,25 +5,21 @@
 ---
 
 project-root/
-│
 ├── Task-1/
 │   ├── task1.py
 │   └── Task-1.md
-│
 ├── Task-2/
 │   ├── task2.py
 │   ├── riscv-isa-manual/
 │   └── Task-2.md
-│
 ├── Task-3/
-│   ├── graph.py              # CORE LOGIC (build graph)
-│   ├── visual_graph.py       # ONLY visualization (creates PNG)
-│   ├── graph.png             # OUTPUT IMAGE
+│   ├── graph.py
+│   ├── visual_graph.py
+│   ├── graph.png
 │   ├── test/
-│   │   └── test_task.py      # UNIT TESTS
-│
+│   │   └── test_task.py
+├── PROPOSAL.md
 └── README.md
-
 **Note:** `package.json`, `webpack.config.js`, `tailwind.config.js` are from another experiment – ignore them.
 
 ---

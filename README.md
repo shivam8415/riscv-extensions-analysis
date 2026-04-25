@@ -3,7 +3,7 @@
 > Three tasks that gradually build from instruction counting → ISA cross‑reference → relationship graph.
 
 ---
-
+```
 project-root/
 ├── Task-1/
 │   ├── task1.py
@@ -21,7 +21,7 @@ project-root/
 ├── PROPOSAL.md
 └── README.md
 **Note:** `package.json`, `webpack.config.js`, `tailwind.config.js` are from another experiment – ignore them.
-
+```
 ---
 
 ## What each task does

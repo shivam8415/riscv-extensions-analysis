@@ -5,9 +5,10 @@
 ---
 ```
 project-root/
-├── Task-1/
-│   ├── task1.py
-│   └── Task-1.md
+Task-1/
+├── task1.py
+├── riscv-extensions-landscape/
+│   └── src/instr_dict.json
 ├── Task-2/
 │   ├── task2.py
 │   ├── riscv-isa-manual/

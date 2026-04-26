@@ -53,28 +53,30 @@ def print_multi_ext(multi_ext):
 def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Case 1: running from Task-1/
-    path1 = os.path.join(
-        base_dir,
-        "riscv-extensions-landscape",
-        "src",
-        "instr_dict.json"
-    )
+    possible_paths = [
+        # when running from Task-1/
+        os.path.join(base_dir, "riscv-extensions-landscape", "src", "instr_dict.json"),
 
-    # Case 2: running from inside riscv-extensions-landscape/
-    path2 = os.path.join(
-        base_dir,
-        "src",
-        "instr_dict.json"
-    )
+        # when running from inside riscv-extensions-landscape/
+        os.path.join(base_dir, "src", "instr_dict.json"),
 
-    if os.path.exists(path1):
-        json_path = path1
-    elif os.path.exists(path2):
-        json_path = path2
-    else:
+        # fallback (if structure slightly different)
+        os.path.join(base_dir, "..", "Task-1", "riscv-extensions-landscape", "src", "instr_dict.json"),
+    ]
+
+    json_path = None
+    for path in possible_paths:
+        if os.path.exists(path):
+            json_path = path
+            break
+
+    if not json_path:
         print("❌ instr_dict.json not found in expected locations")
+        for p in possible_paths:
+            print("Checked:", p)
         return
+
+    print("Using file:", json_path)  # debug (can remove later)
 
     data = load_data(json_path)
 
@@ -82,6 +84,6 @@ def main():
 
     print_summary(ext_map)
     print_multi_ext(multi_ext)
-
+    
 if __name__ == "__main__":
     main()

@@ -60,28 +60,51 @@ Task-1/
 
 ---
 
-## How to run
+## How to Run
 
 ### 1. Install dependencies
 ```bash
 pip install networkx matplotlib
+```
 
-2. Run each task
-Task 1
+---
 
-bash
+### 2. Run Tasks (from project root)
+
+#### Task 1
+```bash
+python Task-1/task1.py
+```
+
+---
+
+#### Task 2
+```bash
+python Task-2/task2.py
+```
+
+> Requires `riscv-isa-manual/` folder inside Task-2
+
+---
+
+#### Task 3
+```bash
+python Task-3/visual_graph.py
+```
+
+---
+
+## Alternative (manual navigation)
+
+```bash
 cd Task-1
 python task1.py
-Task 2 (requires riscv-isa-manual/ folder)
 
-bash
 cd ../Task-2
 python task2.py
-Task 3
 
-bash
 cd ../Task-3
-python visual_graph.py   # or graph.py
+python visual_graph.py
 ```
 Author
 Shivam Yadav
